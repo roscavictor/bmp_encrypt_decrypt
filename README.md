@@ -13,6 +13,6 @@
 - create vsecond, initialise its first element, and afterwards, in union z, its value is initialised
    with the (h*w+i)-th element from the array of random numbers
 -save array
-###Decrypting
+### Decrypting
  - Mostly the same, just that when we encrypt, we first do the permutation and then xor them
   - Instead, we first xor them, and then do the permutation
