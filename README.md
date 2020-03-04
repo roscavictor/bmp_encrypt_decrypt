@@ -1,6 +1,6 @@
 # bmp_encrypt_decrypt
 ## Short description
-###Encrypting
+### Encrypting
 - Transform the 2d image into a 1d array of pixels in __Lin__
 - create an array of random numbers, initialise the first element with with the key in __key.txt__ 
   and initialise the numbers with xorshift32
