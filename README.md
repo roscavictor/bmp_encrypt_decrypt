@@ -8,11 +8,11 @@
 - create "vprim" array of pixels which contains the elements of the first pixel array v,
    but the elements are initialised  "according to the permutation"
 - sv is the starting value from the key file, and we assign it in an int , "val" that's in an union that 
- contains unsigned char (r,g,b), and in union y we initialise val with the h*w-th element from the array
+ contains unsigned char (r,g,b). This union makes "xor-ing" the pixels with random numbers easier, numbers which will be inserted in the "val" of the unions. In union y we initialise val with the h*w-th element from the array
  of random numbers
 - create vsecond, initialise its first element, and afterwards, in union z, its value is initialised
    with the (h*w+i)-th element from the array of random numbers
--save array
+- save array
 ### Decrypting
  - Mostly the same, just that when we encrypt, we first do the permutation and then xor them
   - Instead, we first xor them, and then do the permutation
