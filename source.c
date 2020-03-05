@@ -38,7 +38,7 @@ pixel* Lin(char* imgpath)
 
 	fseek(f, 18, SEEK_SET);
 	fread(&w, sizeof(unsigned int), 1, f);
-	fread(&h, sizeof(unsigned int), 1, f);  //citim inaltimea si lungimea
+	fread(&h, sizeof(unsigned int), 1, f);  //read width and height
 	fseek(f, 54, SEEK_SET);
 
 	if (w % 4 != 0)
@@ -56,7 +56,7 @@ pixel* Lin(char* imgpath)
 			v[k].r = RGB[2];
 			v[k].g = RGB[1];
 			v[k].b = RGB[0];
-			k++;                 //liniarizarea vectorului de pixeli
+			k++;                 //linearising the pixel array (transforming it into a 1d array from 2d)
 		}
 		fseek(f, padding, SEEK_CUR);
 	}
