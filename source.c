@@ -24,7 +24,7 @@ union uni
 	unsigned char g;
 	unsigned char b;
 };
-pixel* Lin(char* imgpath)
+pixel* Lin(char* imgpath)  //transforming image into 1d array
 {
 
 	unsigned char RGB[3];
@@ -281,7 +281,7 @@ void decrypt(char* imgsource, char* destination, char* keypath)
 	vsecond[0].g = x.g ^ v[0].g ^ y.g;
 	vsecond[0].r = x.r ^ v[0].r ^ y.r;
 	union uni z;
-	for (i = 1; i < h * w; i++)
+	for (i = 1; i < h * w; i++) //xor-ing elements
 	{
 		z.val = r[h * w + i];
 		vsecond[i].b = v[i - 1].b ^ v[i].b ^ z.b;
